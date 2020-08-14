@@ -4,7 +4,6 @@ import cors from 'cors'
 
 // Require API routes
 import users from './routes/users'
-import test from './routes/test'
 import calc from './routes/calculations'
 
 // Create express instance
@@ -14,7 +13,6 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 app.use(users)
-app.use(test)
 app.use(calc)
 
 // Export express app

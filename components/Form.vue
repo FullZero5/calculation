@@ -1,24 +1,29 @@
 <template>
-  <div class="w-full bg-grey-lighter h-screen flex flex-col justify-center">
-    <div class="w-64 mx-auto bg-white shadow-md rounded p-8 mb-4">
-      <div class="mb-4">
-        <label class="block text-grey-darkest font-bold mb-2" for="x">Х</label>
-        <input v-model="data.x" class="shadow border rounded w-full p-2 text-xs text-grey-darker" type="number">
+  <section class="text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+      <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+        <h1 class="title-font font-medium text-3xl text-gray-900">
+          Расчет чего то
+        </h1>
+        <p class="leading-relaxed mt-4">
+          Для проведение вычислений заполните форму введите все необходимые данные и нажмите кнопку Расчитать
+        </p>
       </div>
-      <div class="mb-4">
-        <label class="block text-grey-darkest font-bold mb-2" for="y">Y </label>
-        <input v-model="data.y" class="shadow border rounded w-full p-2 text-xs text-grey-darker mb-3" type="number">
-      </div>
-      <div class="flex items-center justify-between">
-        <button class="bg-blue text-xs text-white font-bold py-2 px-4 rounded" @click="sendForm">
-          Отправить
+      <div class="lg:w-2/6 md:w-1/2 bg-gray-200 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
+          Введите данные
+        </h2>
+        <input v-model="data.x" class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" type="text">
+        <input v-model="data.y" class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4" type="text">
+        <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" @click="sendForm">
+          Расчитать
         </button>
+        <p v-if="result" class="text-xs text-gray-500 mt-3">
+          Результат вычислений: {{ result }}
+        </p>
       </div>
     </div>
-    <p v-if="result" class="text-grey text-xs text-center">
-      Результат вычислений: {{ result }}
-    </p>
-  </div>
+  </section>
 </template>
 
 <script>

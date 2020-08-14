@@ -1,36 +1,22 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        Демо приложение
-      </h1>
-      <div>
-        {{ test }}
-        <div class="links">
-          <a
-            href="/users"
-            class="button--green"
-          >
-            Users List
-          </a>
-          <a
-            href="/calculations"
-            class="button--green"
-          >
-            Расчеты
-          </a>
-        </div>
-      </div>
-    </div>
+  <div>
+    <Uslugi />
   </div>
 </template>
 <script>
 export default {
   name: 'IndexPage',
-  async asyncData ({ $http }) {
-    const test = await $http.$get('/api/test')
+  head () {
     return {
-      test
+      title: 'Главная - ЭЗОП',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'ЭЗОП'
+        }
+      ]
     }
   }
 }
