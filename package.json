@@ -1,0 +1,31 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Viktor <va.larionov@lorus-scm.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "yarn lint:js",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@nuxt/http": "latest",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "nuxt": "latest"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/tailwindcss": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "nuxt-purgecss": "^1.0.0",
+    "nuxt-webfontloader": "^1.1.0"
+  }
+}
