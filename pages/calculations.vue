@@ -1,6 +1,7 @@
 <template>
   <div>
     <Form/>
+    <Login/>
   </div>
 </template>
 <script>
